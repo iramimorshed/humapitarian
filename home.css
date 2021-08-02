@@ -1,0 +1,202 @@
+/* Adds cream color to background + removes space at the very top */
+body {
+    background-color: #FEFAE0;
+    margin: 0 auto; 
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #DDA15E;
+    overflow: hidden;
+    margin: 0 auto; 
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 18px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold; 
+    font-stretch: extra-expanded;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    color: black;
+    background-color: #E8BC8C; 
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #BC6C25;
+    color: white;
+}
+
+/* Apply styling to header elements ex. Humapitarian, What Should I Do */
+.header {
+    color: #718355; 
+    font-family: 'Overpass Mono', monospace;
+    letter-spacing: 15px;
+    /* margin-top: 15px;  */
+    font-size: 48px;
+    text-align:center;
+    /* padding: 5px;  */
+    word-spacing: -25px ;
+}
+
+/* Apply styling to blurb elements right underneath main header */
+.blurb {
+    color: black; 
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px; 
+    text-align: center;
+    margin-right: 300px; 
+    margin-left: 300px; 
+    margin-top: -50px; 
+    /* margin-bottom: 50px;  */
+    line-height: 1.5em; 
+}
+
+/* Apply styling to instructions box underneath blurb */
+span.instructions {
+    border-style: solid; 
+    border-color: #DDA15E; 
+    border-width: 2px;
+    padding: 20px; 
+}
+
+.instructions {
+    color: black; 
+    font-family: 'Roboto', sans-serif;
+    font-style: italic; 
+    font-size: 17px;
+    text-align: center; 
+    margin-top: 82px; 
+}
+
+/* TEMPORARY: Style the map image before replacing with clickable map */
+#img-map {
+    /* display: block; */
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 50%; */
+    text-align: center; 
+    margin-top: 90px; 
+    margin-bottom: 50px; 
+    position:relative; 
+}
+
+.pin {
+    display: none;
+}
+
+.tooltip-up, .tooltip-down {
+    position: absolute;
+    background: url("https://i.imgur.com/13rZbuk.png");
+    width: 25px;
+    height: 37px;
+}
+.tooltip-down {
+    background-position: 0 -37px;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+    border-bottom: 10px solid #fff1d3;
+    border-left: 10px solid transparent;
+    border-right : 10px solid transparent;
+}
+
+.tooltip-down .tooltip {
+    bottom: 12px;
+    top: auto;
+}
+ 
+.tooltip-down .tooltip::after {
+    bottom: -10px;
+    top: auto;
+    border-bottom: 0;
+    border-top: 10px solid #ffdb90;
+}
+ 
+.tooltip h2 {
+    font: bold 1.3em 'Trebuchet MS', Tahoma, Arial;
+    margin: 0 0 10px;
+}
+ 
+.tooltip ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Add a brown border to the temporary image */
+img {
+    border: 4px solid #BC6C25; 
+}
+
+
+#fact-gen {
+    /* Apply styling to button e.g. font, size, color, button color */
+    font-family: 'Overpass Mono', monospace;
+    font-size: 24px;
+    color: white; 
+
+    background-color: #94AE86;
+    border: solid 2px #718355;
+
+    background-color: #BC6C25;
+    border: solid 2px #DDA15E; 
+    
+    /* Add padding preferences to button */
+    padding-left: 15px; 
+    padding-top: 6px; 
+    padding-bottom: 6px;
+
+    /* Apply rounded corners to button */
+    border-radius: 8px;
+    letter-spacing: 8px;
+
+    /* Centers and adds spacing between Instructions and Button */
+    margin: auto; 
+    margin-top: 80px; 
+    display: flex;
+    text-align: center;  
+
+    cursor: pointer;
+    box-shadow: 0 5px #DDA15E;
+}
+
+/* When hovering over the button, change color to lighter shade */
+#fact-gen:hover {
+    /* background-color: #aa6122; */
+    background-color: #CC7528;
+}
+
+/* When clicking the button, add press down effect */
+#fact-gen:active {
+    background-color: #CC7528;
+    box-shadow: 0 5px #DDA15E;
+    transform: translateY(4px);
+}
+
+#fact {
+    color: #283618; 
+    font-family: 'Roboto', sans-serif;
+    /* letter-spacing: 1px;  */
+    font-size: 26px; 
+    text-align: center;
+    margin-top: 52px; 
+    margin-bottom: 52px; 
+    
+}
+

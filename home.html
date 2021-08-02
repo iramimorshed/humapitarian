@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ADD BOOTSTRAP CSS FILE -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <link href="home.css" rel="stylesheet" type="text/css">
+
+    <!-- Links to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@700&family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+<body>
+    <!-- NAV BAR -->
+    <div class="topnav">
+        <a href="#references">REFERENCES</a>
+        <!-- <a href="#learnmore">LEARN MORE</a> -->
+        <a href="take-action.html">TAKE ACTION</a>
+        <a class="active" href="#home">HOME</a>
+    </div>
+
+    <!-- TITLE AT TOP OF WEBSITE UNDER NAV -->
+    <div class="header">
+        <h1>HUMAPITARIAN</h1>
+    </div>
+
+    <!-- BLURB ABOUT WEBSITE -->
+    <div class="blurb spacing">
+        <p>
+        <b>A humanitarian crisis</b> is defined as a critical threat to the health and safety <br> of a community. Unfortunately, 
+        many nations are currently and have been experiencing humanitarian crises, most receiving little to no media coverage.
+        </p>
+
+        <p>
+            <b>Humapitarian</b> was designed to summarize such events in a concise and digestible format, thus raising awareness and urging
+            others to <i>further educate themselves and take action.</i>
+        </p>
+    </div>
+
+    <!-- INSTRUCTIONS ON HOW TO USE/INTERACT WITH MAP -->
+    <div class="instructions" >
+        <p> 
+            <span class="instructions">
+            Instructions: Click a specific country to find out more about its humanitarian crises.
+            </span>
+        </p>
+    </div>
+
+    <!-- <map name="infographic">
+        <area shape="poly" coords="130,147,200,107,254,219,130,228" href="https://developer.mozilla.org/docs/Web/HTML"
+            target="_blank" alt="HTML" />
+        <area shape="poly" coords="130,147,130,228,6,219,59,107" href="https://developer.mozilla.org/docs/Web/CSS"
+            target="_blank" alt="CSS" />
+        <area shape="poly" coords="130,147,200,107,130,4,59,107" href="https://developer.mozilla.org/docs/Web/JavaScript"
+            target="_blank" alt="JavaScript" />
+    </map>
+    <img usemap="#infographic" src="/media/examples/mdn-info2.png" alt="MDN infographic" /> -->
+
+    <!-- IMAGE MAP -->
+    <map name="humap">
+        <!-- INDIA SHAPE -->
+        <area id="india" shape="poly" target="_blank" coords="646,173, 655,171, 658,181, 663,188, 663,192, 685,200, 686,212, 661,231, 
+        661,244, 657,250, 641,214, 633,212, 631,207, 636,206, 633,197, 649,180">   
+        
+        <!-- AFGHANISTAN SHAPE -->
+        <area id="afghanistan" shape="poly" target="_blank"
+        coords="610,171, 621,164, 631,164, 636,160, 634,166, 638,173, 632,179, 625,183, 618,190, 608,188, 611,183, 608,178" href="https://en.wikipedia.org/wiki/Afghanistan">
+
+        <!-- PALESTINE SHAPE -->
+        <area title="Palestine" id="palestine" shape="circle" target="_blank"
+            coords="539,177,6"
+            href="https://en.wikipedia.org/wiki/Palestine">
+
+        <!-- CHINA SHAPE  -->
+        <area alt="China" id="china" shape="poly" target="_blank" coords="642,154, 661,141, 658,134, 665,131, 667,124, 674,126, 674,120, 678,118, 687,124, 687,132, 700, 137, 704,144, 715,143, 726,147, 
+        745,139, 745,134, 767,127, 745,139, 745,134, 767,127, 755,121, 758,114, 766,113, 768,100, 783,101, 798,123, 809,120, 798,141, 761,156, 771,190, 742,214, 731,208, 727,207, 715,211, 
+        705,205, 709,192, 697,188, 690,193, 659,185, 654,180,653,169, 644,162" href="https://en.wikipedia.org/wiki/China">
+        
+
+        <!-- Errors on Syria shape, redirects to Yemen website -->
+        <!-- YEMEN SHAPE
+        <area id="yemen" shape="circle" target="_blank"
+            coords="557,223, 566,224, 568,226, 570,221, 580,220, 583,225, 558,237, 557,229, 557,224"
+            href="https://en.wikipedia.org/wiki/Yemen"> -->
+
+        <!-- SYRIA SHAPE
+        <area id="syria" shape="circle" target="_blank" coords="540,166, 552,163, 552,171, 541,178, 536,178, 538,168, 540,164" href="https://en.wikipedia.org/wiki/Syria"> -->
+    
+    
+    </map>
+
+
+
+    <!-- REPLACE IMAGE WITH CLICKABLE MAP -->
+    <div id="img-map">
+        <img src="map_two.png" usemap="#humap" alt="This is an image of the world map." style="width:900px;height:500px;">
+        <!-- TOOLTIP FOR INDIA -->
+        <div class="pin pin-down" data-xpos="653" data-ypos="207">
+            <h2>INDIA</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Adipiscing enim eu turpis egestas pretium aenean pharetra. Vulputate sapien nec sagittis aliquam malesuada.
+                Accumsan in nisl nisi scelerisque eu ultrices. Turpis egestas integer eget aliquet. Nibh praesent tristique magna sit
+                amet purus. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Orci sagittis eu volutpat odio
+                facilisis mauris sit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Tincidunt
+                lobortis feugiat vivamus at. In arcu cursus euismod quis viverra nibh cras.
+                
+                Vitae semper quis lectus nulla at. Ut lectus arcu bibendum at varius. Odio aenean sed adipiscing diam donec. Amet purus
+                gravida quis blandit turpis. Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Maecenas pharetra convallis
+                posuere morbi leo urna molestie at. Vestibulum sed arcu non odio euismod lacinia. Volutpat lacus laoreet non curabitur
+                gravida. Vitae suscipit tellus mauris a diam maecenas. Nisl pretium fusce id velit ut. Orci a scelerisque purus semper
+                eget duis at tellus at. Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Eget dolor morbi non arcu
+                risus. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Condimentum id venenatis a condimentum. Ac
+                orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Vivamus at augue eget arcu dictum varius duis at
+                consectetur. Ipsum suspendisse ultrices gravida dictum fusce ut. Viverra mauris in aliquam sem fringilla ut morbi
+                tincidunt. Integer eget aliquet nibh praesent tristique magna.
+            </p>
+            <img src="https://dynaimage.cdn.cnn.com/cnn/w_1600/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F210504163050-01-india-coronavirus-crisis-210502.jpg">
+            <figcaption>A medical worker observes patients inside a Covid-19 ward that was set up inside a sports stadium in New Delhi. <i>Getty Images</i></figcaption>
+        </div>
+        <!-- TOOLTIP FOR AFGHANISTAN -->
+        <div class="pin pin-down" data-xpos="619" data-ypos="175">
+            <h2>AFGHANISTAN</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Adipiscing enim eu turpis egestas pretium aenean pharetra. Vulputate sapien nec sagittis aliquam malesuada.
+                Accumsan in nisl nisi scelerisque eu ultrices. Turpis egestas integer eget aliquet. Nibh praesent tristique magna
+                sit
+                amet purus. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Orci sagittis eu volutpat odio
+                facilisis mauris sit. Faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam. Tincidunt
+                lobortis feugiat vivamus at. In arcu cursus euismod quis viverra nibh cras.
+            
+                orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Vivamus at augue eget arcu dictum varius duis
+                at
+                consectetur. Ipsum suspendisse ultrices gravida dictum fusce ut. Viverra mauris in aliquam sem fringilla ut morbi
+                tincidunt. Integer eget aliquet nibh praesent tristique magna.
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <!-- <div id="image-map">
+        <img width="611" height="438" src="https://i.imgur.com/VlW9u1t.png" alt="Our Locations">
+        <div class="pin pin-down" data-xpos="115" data-ypos="125">
+            <h2>Willowbrook Place</h2>
+            <ul>
+                <li><strong>123 Street Address</strong></li>
+                <li>City, ST, 12345</li>
+                <li><strong>(555) 555-5555</strong></li>
+                <li><a href="#" target="_blank">Website</a></li>
+                <li>Coming in Spring 2015</li>
+            </ul>
+        </div>
+        <div class="pin pin-down" data-xpos="215" data-ypos="175">
+            <h2>Ambergrove Place</h2>
+            <ul>
+                <li><strong>123 Street Address</strong></li>
+                <li>City, ST, 12345</li>
+                <li><strong>(555) 555-5555</strong></li>
+                <li><a href="#" target="_blank">Website</a></li>
+                <li>Coming in Spring 2015</li>
+            </ul>
+        </div>
+        <div class="pin" data-xpos="255" data-ypos="65">
+            <h2>Chelsea Place</h2>
+            <ul>
+                <li><strong>123 Street Address</strong></li>
+                <li>City, ST, 12345</li>
+                <li><strong>(555) 555-5555</strong></li>
+                <li><a href="#" target="_blank">Website</a></li>
+                <li>Coming in Spring 2015</li>
+            </ul>
+        </div>
+    </div> -->
+
+
+    
+    <!-- INSTRUCTIONS ON HOW TO USE BUTTON -->
+    <div class="instructions">
+        <p>
+            <span class="instructions">
+                Click on the button below to generate a random fact.
+            </span>
+        </p>
+    </div>
+
+    <div id="btn-container">
+        <!-- FACT GENERATOR BUTTON  -->
+        <button id="fact-gen">CLICK ME!</button>
+        <!-- Empty paragraph that will have paragraph text added in home.js file -->
+        <p id="fact">Spoopylalkdfklalfdkakflad</p>
+    </div>
+
+    <!-- LINK TO JS FILE -->
+    <script src="home.js"></script>
+    
+</body>
+</html>
