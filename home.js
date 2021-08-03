@@ -33,6 +33,7 @@ if (factButton) {
 }
 
 // ----------- TOOLTIPS FOR MAP ----------- 
+// https://youtu.be/e_jEquJo7y8?t=2424
 const tooltips = document.querySelectorAll('.all-tooltips .tooltip'); 
 const mapSection = document.querySelector('section'); 
 const mapContainer = document.querySelector('.container'); 
@@ -51,8 +52,8 @@ const contentPos = () => {
 }
 
 // Adding event listeners so once content is fully loaded, contentPos will be called
-window.addEventListener('DOMContentLoaded', contentPos);
-window.addEventListener('resize', contentPos); 
+window.addEventListener("resize", contentPos);
+window.addEventListener("DOMContentLoaded", contentPos); 
 
 tooltips.forEach(tooltip => {
     const pin = tooltip.querySelector('.pin');
@@ -64,7 +65,7 @@ tooltips.forEach(tooltip => {
     pin.addEventListener('mouseleave', () => {
         timeOut = setTimeout(() => {
             tooltip.classList.remove('active'); 
-        }, 1000)
+        }, 700)
     })
 
     content.addEventListener('mouseover', () => {
@@ -75,6 +76,6 @@ tooltips.forEach(tooltip => {
     content.addEventListener('mouseleave', () => {
         timeOut = setTimeout(() => {
             tooltip.classList.remove('active');
-        }, 1000)
+        }, 700)
     })
 })
