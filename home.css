@@ -158,13 +158,22 @@ section {
 
     /* Context box border color */
     border: 4px solid #BB4430;
+    width: 600px; 
+    height: 300px; 
+    overflow: auto; 
+    /* overflow-x: visible; 
+    overflow-y: scroll;  */
+    padding-top: 30px; 
 }
+
+
 
 /* Upon mouseover pulsing pin, display content */
 .tooltip.active .tooltip-content { 
     opacity: .8; 
     pointer-events: all;
 }
+
 
 /* Styling for arrow on top of tooltip box */
 .tooltip-content .arrow {
@@ -175,10 +184,14 @@ section {
     border-bottom-color: #BB4430; 
 
     /* Centers arrow at top of box */
-    top: 0px; 
+    top: 10%; 
     transform: translate(-50%, -100%); 
     left: 50%; 
 }
+
+
+
+
 
 /* Add a brown border to the temporary image */
 /* img {
@@ -283,6 +296,63 @@ section {
     top: 45%; 
     left: 63%; 
 }
+
+/* SYRIA PIN POSITION */
+.syria .pin {
+    top: 33%; 
+    left: 60.5%; 
+}
+
+/* CHINA PIN POSITION */
+.china .pin {
+    top: 34.25%;
+    left: 80%;  
+}
+
+
+
+/* 
+Styling applied to tooltip-1 in video tutorial */
+/* .tooltip-1 .tooltip-content {
+  display: flex;
+  max-width: 500px;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+  background-color: aliceblue;
+}
+.tooltip-1.active .tooltip-content {
+  display: flex;
+}
+.tooltip-1 .tooltip-content .img {
+  width: 50%;
+  object-fit: cover;
+}
+.tooltip-1 .tooltip-content .content {
+  width: 50%;
+  padding: 20px;
+}
+.tooltip-1 .tooltip-content .content h1 {
+  font-size: 24px;
+}
+.tooltip-1 .tooltip-content .content p {
+  font-size: 14px;
+}
+.tooltip-1 .tooltip-content .content button {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 20px #00000020;
+} */
+
 
 
 

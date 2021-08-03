@@ -39,6 +39,8 @@ const mapSection = document.querySelector('section');
 const mapContainer = document.querySelector('.container'); 
 let timeOut; 
 
+// Account for right and left conflicts
+// Function positions content underneath pin 
 const contentPos = () => {
     tooltips.forEach(tooltip => {
         const pin = tooltip.querySelector('.pin'); 
