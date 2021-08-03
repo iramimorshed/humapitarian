@@ -2,7 +2,10 @@
 body {
     background-color: #FEFAE0;
     margin: 0 auto; 
+    width: 100%; 
 }
+
+/* ---------- NAVIGATION BAR ---------- */
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -36,6 +39,8 @@ body {
     background-color: #BC6C25;
     color: white;
 }
+
+/* ---------- HEADING, BLURB, INSTRUCTIONS ---------- */
 
 /* Apply styling to header elements ex. Humapitarian, What Should I Do */
 .header {
@@ -80,70 +85,184 @@ span.instructions {
 }
 
 /* TEMPORARY: Style the map image before replacing with clickable map */
-#img-map {
+/* #img-map { */
     /* display: block; */
     /* margin-left: auto;
     margin-right: auto;
     width: 50%; */
+    /* margin-left: 50px; 
+    margin-right: 50px; 
     text-align: center; 
     margin-top: 90px; 
     margin-bottom: 50px; 
-    position:relative; 
+    position:relative;  */
+/* } */
+
+/* ---------- MAP CONTAINER ---------- */
+
+section {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 90px; 
 }
 
-.pin {
-    display: none;
+/* Adds styling to container in which map and tooltips are contained inside */
+.container {
+    width: 90%; 
+    margin: 0 auto; 
+    position: relative; 
 }
 
-.tooltip-up, .tooltip-down {
-    position: absolute;
-    background: url("https://i.imgur.com/13rZbuk.png");
-    width: 25px;
-    height: 37px;
-}
-.tooltip-down {
-    background-position: 0 -37px;
-}
-
-.tooltip::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    margin-left: -10px;
-    border-bottom: 10px solid #fff1d3;
-    border-left: 10px solid transparent;
-    border-right : 10px solid transparent;
-}
-
-.tooltip-down .tooltip {
-    bottom: 12px;
-    top: auto;
-}
- 
-.tooltip-down .tooltip::after {
-    bottom: -10px;
-    top: auto;
-    border-bottom: 0;
-    border-top: 10px solid #ffdb90;
-}
- 
-.tooltip h2 {
-    font: bold 1.3em 'Trebuchet MS', Tahoma, Arial;
-    margin: 0 0 10px;
-}
- 
-.tooltip ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* Add a brown border to the temporary image */
-img {
+/* Adjusts image sizing and other styling inside of our container*/
+.container img {
+    width: 100%; 
+    height: 100%;
     border: 4px solid #BC6C25; 
 }
 
+/* Styling for h1 tags inside of our map container */
+.container h1 {
+    font-family: 'Overpass Mono', monospace;
+}
+
+/* Styling for p tags inside of our map container */
+.container p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for all of our tooltips */
+.all-tooltips {
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+}
+
+/* Styling for content box */
+.tooltip-content {
+    position: absolute; 
+    background-color: white;
+    box-shadow: 0px 0px 20px #00000020; 
+    padding: 30px; 
+    border-radius: 5px; 
+    width: 90vw; 
+    max-width: 300px; 
+
+    /* Makes tooltip context box "disappear" */
+    opacity: 0; 
+    pointer-events: none; 
+    z-index: 2; 
+    /* opacity: 80%;  */
+
+    /* Context box border color */
+    border: 4px solid #BB4430;
+}
+
+/* Upon mouseover pulsing pin, display content */
+.tooltip.active .tooltip-content { 
+    opacity: .8; 
+    pointer-events: all;
+}
+
+/* Styling for arrow on top of tooltip box */
+.tooltip-content .arrow {
+    position: absolute;
+    border: 12px solid transparent; 
+    
+    /* Arrow color */
+    border-bottom-color: #BB4430; 
+
+    /* Centers arrow at top of box */
+    top: 0px; 
+    transform: translate(-50%, -100%); 
+    left: 50%; 
+}
+
+/* Add a brown border to the temporary image */
+/* img {
+    border: 4px solid #BC6C25; 
+} */
+
+/* Styling for pin and pulsing animation */
+.pin {
+    /* Defines positioning and border style of pin */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    background-color: #BB4430; 
+    height: 20px; 
+    width: 20px; 
+    border-radius: 50%;
+    cursor: pointer; 
+
+
+    /* https://www.florin-pop.com/blog/2019/03/css-pulse-effect/ */
+    /* background: #BB4430; */
+    
+    /* border-radius: 50%; */
+	/* margin: 10px;
+	height: 20px;
+	width: 20px; */
+
+    /* Scales pin by a factor of 1 and applies animation for infinite time */
+    box-shadow: 0 0 0 0 rgba(187, 68, 48, 1);
+	transform: scale(1);
+    animation: pulse 1.5s infinite;
+    
+
+
+}
+
+/* Allows for animation */
+/* .pin::after {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%; 
+    background-color: #BB4430;
+    border-radius: 50%;
+    animation: pulse-effect 1s ease-in-out infinite; 
+} */
+
+/* Pulse animation for pin */
+@keyframes pulse {
+    /* 0% {
+        transform: scale(.5); 
+        opacity: 1; 
+    }
+
+    100% {
+        transform: scale(3);
+        opacity: 0; 
+    } */
+
+    /* Animation goes from 0% to 100%: 
+    1. At 0%, the pin shrinks and the box-shadow has an opacity of 0.7
+    2. At 70% of the animation, the pin expands and the shadow has an opacity of 0 (transparent)
+    3. At 100%, the pin shrinks slightly and the shadow remains transparent */
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(187, 68, 48, 0.7);
+    }
+    
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(187, 68, 48, 0);
+    }
+    
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(187, 68, 48, 0);
+    }
+}
+
+
+
+/* ---------- FACT GENERATOR BUTTON ---------- */
 
 #fact-gen {
     /* Apply styling to button e.g. font, size, color, button color */

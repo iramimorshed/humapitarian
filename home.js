@@ -1,5 +1,4 @@
-
-
+// ----------- FACT BUTTON----------- 
 // Wil replace with relevant facts 
 const factStrings = [
 "More human twins are being born now than ever before.", 
@@ -11,9 +10,13 @@ const factStrings = [
 "Hair and nails grow faster during pregnancy.", 
 ]; 
 
+// Initialize and declare count variable to keep track of array contents
 var count = 0; 
+
+// Retrieve empty paragraph tag 
 const fact = document.getElementById("fact"); 
 
+// Appends actual fact to button container using count to index into array
 const generateFact = () => {
     if (count == factStrings.length - 1)
         count = 0;
@@ -22,8 +25,56 @@ const generateFact = () => {
     count += 1;
 }; 
 
+// Retrieve fact generator button 
+// If button is not null, on click run generateFact()
 var factButton = document.getElementById("fact-gen"); 
 if (factButton) {
     factButton.addEventListener('click', generateFact); 
 }
 
+// ----------- TOOLTIPS FOR MAP ----------- 
+const tooltips = document.querySelectorAll('.all-tooltips .tooltip'); 
+const mapSection = document.querySelector('section'); 
+const mapContainer = document.querySelector('.container'); 
+let timeOut; 
+
+const contentPos = () => {
+    tooltips.forEach(tooltip => {
+        const pin = tooltip.querySelector('.pin'); 
+        const content = tooltip.querySelector('.tooltip-content'); 
+        const arrow = tooltip.querySelector('.arrow'); 
+        content.style.left = pin.offsetLeft - content.offsetWidth / 2 + "px"; 
+        content.style.top = pin.offsetTop + 40 + "px"; 
+        arrow.style.left = pin.offsetLeft - content.offsetLeft + pin.offsetWidth / 2 - 3 + "px";   
+
+    })
+}
+
+// Adding event listeners so once content is fully loaded, contentPos will be called
+window.addEventListener('DOMContentLoaded', contentPos);
+window.addEventListener('resize', contentPos); 
+
+tooltips.forEach(tooltip => {
+    const pin = tooltip.querySelector('.pin');
+    const content = tooltip.querySelector('.tooltip-content'); 
+    pin.addEventListener('mouseover', () => {
+        tooltip.classList.add('active'); 
+    })
+
+    pin.addEventListener('mouseleave', () => {
+        timeOut = setTimeout(() => {
+            tooltip.classList.remove('active'); 
+        }, 1000)
+    })
+
+    content.addEventListener('mouseover', () => {
+        clearTimeout(timeOut); 
+        tooltip.classList.add('active');
+    })
+
+    content.addEventListener('mouseleave', () => {
+        timeOut = setTimeout(() => {
+            tooltip.classList.remove('active');
+        }, 1000)
+    })
+})
