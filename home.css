@@ -143,12 +143,13 @@ section {
 /* Styling for content box */
 .tooltip-content {
     position: absolute; 
-    background-color: white;
+    background-color: #FCFBF5;
     box-shadow: 0px 0px 20px #00000020; 
     padding: 30px; 
     border-radius: 5px; 
-    width: 90vw; 
+    /* width: 90vw;  */
     max-width: 300px; 
+    height: 300px; 
 
     /* Makes tooltip context box "disappear" */
     opacity: 0; 
@@ -158,12 +159,26 @@ section {
 
     /* Context box border color */
     border: 4px solid #BB4430;
-    width: 600px; 
-    height: 300px; 
     overflow: auto; 
-    /* overflow-x: visible; 
-    overflow-y: scroll;  */
-    padding-top: 30px; 
+    padding-top: 1%; 
+}
+
+/* Applies styling to scrollbar */
+.tooltip-content::-webkit-scrollbar {
+    /* Width of the entire scrollbar */
+    width: 12px;               
+}
+
+.tooltip-content::-webkit-scrollbar-track {
+    /* color of the tracking area */
+    background: lightgrey;        
+}
+
+.tooltip-content::-webkit-scrollbar-thumb {
+  background-color: #718355;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px solid lightgray;  
+  /* creates padding around scroll thumb */
 }
 
 
@@ -174,21 +189,33 @@ section {
     pointer-events: all;
 }
 
-
+/* ------- ARROW ------- */
 /* Styling for arrow on top of tooltip box */
-.tooltip-content .arrow {
+/* Before overflow property in .tooltip-content, arrow would extend outside of container */
+/* .tooltip-content .arrow {
     position: absolute;
     border: 12px solid transparent; 
-    
+     */
     /* Arrow color */
-    border-bottom-color: #BB4430; 
+    /* border-bottom-color: #BB4430;  */
 
     /* Centers arrow at top of box */
-    top: 10%; 
-    transform: translate(-50%, -100%); 
-    left: 50%; 
-}
+    /* text-align: center;   */
+    /* transform: translate(-50%, -100%);  */
+    /* transform: translate(30%, 50%);  */
+    /* top: 10%; 
+    left: 50%;  */
+    /* align-items: center; */
+/* } */
 
+
+.tooltip-content h1 {
+    text-align: center; 
+    letter-spacing: 8px;
+    /* color: #495449;  */
+    font-weight: bolder;
+    font-size: 25px; 
+}
 
 
 
@@ -279,6 +306,11 @@ section {
     top: 41%;
 }
 
+
+/* .india.active .tooltip-content {
+  display: flex;
+} */
+
 /* AFGHANISTAN PIN POSITION */
 .afghan .pin {
     left: 68.5%; 
@@ -353,9 +385,23 @@ Styling applied to tooltip-1 in video tutorial */
   box-shadow: 0px 0px 20px #00000020;
 } */
 
+ /* ---------- LAST UPDATED ---------- */
+ .last-update p {
+    font-family: 'Roboto', sans-serif; 
+    margin-left: 5%; 
+    margin-right: 4.5%; 
+    color: black; 
+    /* background-color: #ffffff80;  */
+    margin-top: 5px;
+    font-style: italic; 
+    font-size: 17px;
 
+ }
 
-
+ /* .last-update {
+     background-color: white;
+     opacity: 50%; 
+ } */
 
 /* ---------- FACT GENERATOR BUTTON ---------- */
 
