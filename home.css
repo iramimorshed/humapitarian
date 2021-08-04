@@ -55,6 +55,7 @@ body {
     font-size: 48px;
     text-align:center;
     word-spacing: -25px ;
+    margin-top: 100px; 
 }
 
 /* Apply styling to blurb elements right underneath main header */
@@ -218,7 +219,7 @@ section {
     /* Scales pin by a factor of 1 and applies animation for infinite time */
     box-shadow: 0 0 0 0 rgba(187, 68, 48, 1);
 	transform: scale(1);
-    animation: pulse 1.5s infinite;
+    animation: pulse 2s infinite;
 }
 
 /* Pulse animation for pin */
