@@ -12,6 +12,11 @@ body {
     background-color: #DDA15E;
     overflow: hidden;
     margin: 0 auto; 
+    position: fixed;
+    width: 100%;
+    top: 0px; 
+    z-index: 1;
+
 }
 
 /* Style the links inside the navigation bar */
@@ -113,6 +118,19 @@ section {
 /* Styling for p tags inside of our map container */
 .container p {
     font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for h2 tags inside of our map container */
+.container h2 {
+    margin-top: 30px;
+    margin-bottom: 5px; 
+    font-family: 'Overpass Mono', monospace;
+    font-weight: lighter;
+    /* font-style: italic; */
+    font-size: 18px; 
+    font-variant: small-caps;
+    /* text-align: center; */
+    letter-spacing: 2px;
 }
 
 /* Styling for all of our tooltips */
@@ -293,6 +311,10 @@ section {
 .syria .pin {
     top: 33%; 
     left: 60.5%; 
+}
+
+.syria .tooltip-content {
+    max-width: 300px; 
 }
 
 /* CHINA PIN POSITION */
