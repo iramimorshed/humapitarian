@@ -148,7 +148,7 @@ section {
     padding: 30px; 
     border-radius: 5px; 
     /* width: 90vw;  */
-    max-width: 300px; 
+    max-width: 500px; 
     height: 300px; 
 
     /* Makes tooltip context box "disappear" */
@@ -175,7 +175,7 @@ section {
 }
 
 .tooltip-content::-webkit-scrollbar-thumb {
-  background-color: #718355;    /* color of the scroll thumb */
+  background-color: #283618;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 2px solid lightgray;  
   /* creates padding around scroll thumb */
@@ -270,15 +270,6 @@ section {
 
 /* Pulse animation for pin */
 @keyframes pulse {
-    /* 0% {
-        transform: scale(.5); 
-        opacity: 1; 
-    }
-
-    100% {
-        transform: scale(3);
-        opacity: 0; 
-    } */
 
     /* Animation goes from 0% to 100%: 
     1. At 0%, the pin shrinks and the box-shadow has an opacity of 0.7
@@ -299,6 +290,43 @@ section {
         box-shadow: 0 0 0 0 rgba(187, 68, 48, 0);
     }
 }
+
+/* ------- TOOLTIP ELEMENTS STYLING ------- */
+.tooltip-content h1 {
+    text-align: center; 
+    letter-spacing: 8px;
+    /* color: #495449;  */
+    font-weight: bolder;
+    font-size: 25px; 
+}
+
+.tooltip-content .disclaimer {
+    font-style: italic; 
+    font-size: 12px; 
+    color: #283618; 
+}
+
+.tooltip-content .content a {
+    color: #283618; 
+    font-style: italic; 
+}
+
+.tooltip-content .content .reg-p {
+    font-size: 15px; 
+}
+
+.tooltip-content .content img {
+    border: 3px solid #283618; 
+    border-radius: 1%;
+}
+
+.tooltip-content .content .caption {
+    font-size: 12px; 
+    font-style: italic;
+    color: #283618;
+}
+
+
 
 /* INDIA PIN POSITION */
 .india .pin {
@@ -322,6 +350,9 @@ section {
     top: 35%; 
     left: 59%; 
 }
+
+
+
 
 /* YEMEN PIN POSITION */
 .yemen .pin {
