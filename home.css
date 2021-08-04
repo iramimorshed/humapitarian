@@ -47,10 +47,8 @@ body {
     color: #718355; 
     font-family: 'Overpass Mono', monospace;
     letter-spacing: 15px;
-    /* margin-top: 15px;  */
     font-size: 48px;
     text-align:center;
-    /* padding: 5px;  */
     word-spacing: -25px ;
 }
 
@@ -63,7 +61,6 @@ body {
     margin-right: 300px; 
     margin-left: 300px; 
     margin-top: -50px; 
-    /* margin-bottom: 50px;  */
     line-height: 1.5em; 
 }
 
@@ -75,6 +72,7 @@ span.instructions {
     padding: 20px; 
 }
 
+/* Apply styling to instructions text  */
 .instructions {
     color: black; 
     font-family: 'Roboto', sans-serif;
@@ -84,22 +82,8 @@ span.instructions {
     margin-top: 82px; 
 }
 
-/* TEMPORARY: Style the map image before replacing with clickable map */
-/* #img-map { */
-    /* display: block; */
-    /* margin-left: auto;
-    margin-right: auto;
-    width: 50%; */
-    /* margin-left: 50px; 
-    margin-right: 50px; 
-    text-align: center; 
-    margin-top: 90px; 
-    margin-bottom: 50px; 
-    position:relative;  */
-/* } */
-
 /* ---------- MAP CONTAINER ---------- */
-
+/* Applies styling to section encasing map  */
 section {
     display: flex; 
     align-items: center; 
@@ -147,7 +131,6 @@ section {
     box-shadow: 0px 0px 20px #00000020; 
     padding: 30px; 
     border-radius: 5px; 
-    /* width: 90vw;  */
     max-width: 400px; 
     height: 300px; 
 
@@ -155,10 +138,11 @@ section {
     opacity: 0; 
     pointer-events: none; 
     z-index: 2; 
-    /* opacity: 80%;  */
 
     /* Context box border color */
     border: 4px solid #BB4430;
+
+    /* Applies overflow with scrollbar */
     overflow: auto; 
     padding-top: 1%; 
 }
@@ -175,13 +159,13 @@ section {
 }
 
 .tooltip-content::-webkit-scrollbar-thumb {
-  background-color: #283618;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 2px solid lightgray;  
-  /* creates padding around scroll thumb */
+    /* color of the scroll thumb */
+    background-color: #283618;      
+    /* roundness of the scroll thumb */
+    border-radius: 20px; 
+    /* creates padding around scroll thumb */
+    border: 2px solid lightgray;  
 }
-
-
 
 /* Upon mouseover pulsing pin, display content */
 .tooltip.active .tooltip-content { 
@@ -195,39 +179,15 @@ section {
 /* .tooltip-content .arrow {
     position: absolute;
     border: 12px solid transparent; 
-     */
-    /* Arrow color */
-    /* border-bottom-color: #BB4430;  */
-
-    /* Centers arrow at top of box */
-    /* text-align: center;   */
-    /* transform: translate(-50%, -100%);  */
-    /* transform: translate(30%, 50%);  */
-    /* top: 10%; 
-    left: 50%;  */
-    /* align-items: center; */
-/* } */
-
-
-.tooltip-content h1 {
-    text-align: center; 
-    letter-spacing: 8px;
-    /* color: #495449;  */
-    font-weight: bolder;
-    font-size: 25px; 
-}
-
-
-
-
-/* Add a brown border to the temporary image */
-/* img {
-    border: 4px solid #BC6C25; 
+    border-bottom-color: #BB4430; 
+    transform: translate(-50%, -100%); 
+    top: 0px; 
+    left: 50%; 
 } */
 
 /* Styling for pin and pulsing animation */
+/* Credit: https://www.florin-pop.com/blog/2019/03/css-pulse-effect/  */
 .pin {
-    /* Defines positioning and border style of pin */
     position: absolute; 
     top: 50%; 
     left: 50%; 
@@ -237,40 +197,14 @@ section {
     border-radius: 50%;
     cursor: pointer; 
 
-
-    /* https://www.florin-pop.com/blog/2019/03/css-pulse-effect/ */
-    /* background: #BB4430; */
-    
-    /* border-radius: 50%; */
-	/* margin: 10px;
-	height: 20px;
-	width: 20px; */
-
     /* Scales pin by a factor of 1 and applies animation for infinite time */
     box-shadow: 0 0 0 0 rgba(187, 68, 48, 1);
 	transform: scale(1);
     animation: pulse 1.5s infinite;
-    
-
-
 }
-
-/* Allows for animation */
-/* .pin::after {
-    content: ''; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    height: 100%; 
-    width: 100%; 
-    background-color: #BB4430;
-    border-radius: 50%;
-    animation: pulse-effect 1s ease-in-out infinite; 
-} */
 
 /* Pulse animation for pin */
 @keyframes pulse {
-
     /* Animation goes from 0% to 100%: 
     1. At 0%, the pin shrinks and the box-shadow has an opacity of 0.7
     2. At 70% of the animation, the pin expands and the shadow has an opacity of 0 (transparent)
@@ -292,52 +226,50 @@ section {
 }
 
 /* ------- TOOLTIP ELEMENTS STYLING ------- */
+/* Applies more styling to title of each tooltip box ex. INDIA, PAKISTAN */
 .tooltip-content h1 {
     text-align: center; 
     letter-spacing: 8px;
-    /* color: #495449;  */
     font-weight: bolder;
     font-size: 25px; 
 }
 
+/* Applies styling to disclaimer at top of each container */
 .tooltip-content .disclaimer {
     font-style: italic; 
     font-size: 12px; 
     color: #283618; 
 }
 
+/* Styles anchor tags for citing purposes */
 .tooltip-content .content a {
     color: #283618; 
     font-style: italic; 
 }
 
+/* Styles regular paragraphs containing most information */
 .tooltip-content .content .reg-p {
     font-size: 15px; 
 }
 
+/* Styles images inside of containers */
 .tooltip-content .content img {
     border: 3px solid #283618; 
     border-radius: 1%;
 }
 
+/* Styles image captions below images */
 .tooltip-content .content .caption {
     font-size: 12px; 
     font-style: italic;
     color: #283618;
 }
 
-
-
 /* INDIA PIN POSITION */
 .india .pin {
     left: 72.5%; 
     top: 41%;
 }
-
-
-/* .india.active .tooltip-content {
-  display: flex;
-} */
 
 /* AFGHANISTAN PIN POSITION */
 .afghan .pin {
@@ -350,9 +282,6 @@ section {
     top: 35%; 
     left: 59%; 
 }
-
-
-
 
 /* YEMEN PIN POSITION */
 .yemen .pin {
@@ -372,92 +301,38 @@ section {
     left: 80%;  
 }
 
-
-
-/* 
-Styling applied to tooltip-1 in video tutorial */
-/* .tooltip-1 .tooltip-content {
-  display: flex;
-  max-width: 500px;
-  align-items: stretch;
-  justify-content: center;
-  padding: 0;
-  background-color: aliceblue;
-}
-.tooltip-1.active .tooltip-content {
-  display: flex;
-}
-.tooltip-1 .tooltip-content .img {
-  width: 50%;
-  object-fit: cover;
-}
-.tooltip-1 .tooltip-content .content {
-  width: 50%;
-  padding: 20px;
-}
-.tooltip-1 .tooltip-content .content h1 {
-  font-size: 24px;
-}
-.tooltip-1 .tooltip-content .content p {
-  font-size: 14px;
-}
-.tooltip-1 .tooltip-content .content button {
-  font-family: "Montserrat";
-  font-size: 18px;
-  font-weight: 400;
-  border: none;
-  outline: none;
-  background-color: white;
-  color: black;
-  padding: 10px;
-  cursor: pointer;
-  margin-top: 20px;
-  border-radius: 4px;
-  box-shadow: 0px 0px 20px #00000020;
-} */
-
  /* ---------- LAST UPDATED ---------- */
+ /* Styling applied to "Last Updated" text */
+ /* Might automate this with Date properties */
  .last-update p {
     font-family: 'Roboto', sans-serif; 
     margin-left: 5%; 
     margin-right: 4.5%; 
     color: black; 
-    /* background-color: #ffffff80;  */
     margin-top: 5px;
     font-style: italic; 
     font-size: 17px;
 
  }
 
- /* .last-update {
-     background-color: white;
-     opacity: 50%; 
- } */
-
 /* ---------- FACT GENERATOR BUTTON ---------- */
-
+/* Apply styling to button e.g. font, size, color, button color */
 #fact-gen {
-    /* Apply styling to button e.g. font, size, color, button color */
     font-family: 'Overpass Mono', monospace;
     font-size: 24px;
     color: white; 
 
-    background-color: #94AE86;
-    border: solid 2px #718355;
-
     background-color: #BC6C25;
     border: solid 2px #DDA15E; 
-    
-    /* Add padding preferences to button */
+ 
     padding-left: 15px; 
     padding-top: 6px; 
     padding-bottom: 6px;
-
-    /* Apply rounded corners to button */
+    
     border-radius: 8px;
     letter-spacing: 8px;
 
-    /* Centers and adds spacing between Instructions and Button */
+   
     margin: auto; 
     margin-top: 80px; 
     display: flex;
@@ -469,7 +344,6 @@ Styling applied to tooltip-1 in video tutorial */
 
 /* When hovering over the button, change color to lighter shade */
 #fact-gen:hover {
-    /* background-color: #aa6122; */
     background-color: #CC7528;
 }
 
@@ -480,14 +354,13 @@ Styling applied to tooltip-1 in video tutorial */
     transform: translateY(4px);
 }
 
+/* Actual fact to be displayed on click */
 #fact {
     color: #283618; 
     font-family: 'Roboto', sans-serif;
-    /* letter-spacing: 1px;  */
     font-size: 26px; 
     text-align: center;
     margin-top: 52px; 
     margin-bottom: 52px; 
-    
 }
 

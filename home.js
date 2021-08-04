@@ -33,7 +33,6 @@ if (factButton) {
 }
 
 // ----------- TOOLTIPS FOR MAP ----------- 
-// https://youtu.be/e_jEquJo7y8?t=2424
 const tooltips = document.querySelectorAll('.all-tooltips .tooltip'); 
 const mapSection = document.querySelector('section'); 
 const mapContainer = document.querySelector('.container'); 
@@ -57,6 +56,8 @@ const contentPos = () => {
 window.addEventListener("resize", contentPos);
 window.addEventListener("DOMContentLoaded", contentPos); 
 
+// For each tooltip, when we mouseover the pin we want to change the class to 'active' 
+// When we mouseout, we want to wait 700 ms before the tooltip container closes
 tooltips.forEach(tooltip => {
     const pin = tooltip.querySelector('.pin');
     const content = tooltip.querySelector('.tooltip-content'); 
