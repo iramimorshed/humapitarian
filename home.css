@@ -324,6 +324,10 @@ section {
     left: 80%;  
 }
 
+.china .tooltip-content {
+   width: 300px; 
+}
+
  /* ---------- LAST UPDATED ---------- */
  /* Styling applied to "Last Updated" text */
  /* Might automate this with Date properties */
@@ -381,9 +385,11 @@ section {
 #fact {
     color: #283618; 
     font-family: 'Roboto', sans-serif;
-    font-size: 26px; 
+    font-size: 22px; 
     text-align: center;
     margin-top: 52px; 
     margin-bottom: 52px; 
+    margin-left: 100px;
+    margin-right: 100px;
 }
 

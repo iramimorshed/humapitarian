@@ -1,13 +1,32 @@
 // ----------- FACT BUTTON----------- 
 // Wil replace with relevant facts 
 const factStrings = [
-"More human twins are being born now than ever before.", 
-"A narwhal's tusk reveals its past living conditions.",
-"The first person convicted of speeding was going eight mph.",
-"'New car smell' is the scent of dozens of chemicals.", 
-"The world wastes about 1 billion metric tons of food each year.", 
-"The severed head of a sea slug can grow a whole new body.", 
+"The Gaza Strip, named after the 140 square miles strip of land where 2 million Palestinians live, is nicknamed the world’s largest open-air prison.", 
+"According to the United Nations, the humanitarian crisis in Yemen is the worst in the world.",
+"4 million+ people remain internally displaced within Yemen, 73% of whom are women and children.",
+"Yemen has a poverty rate exceeding 50%, and 80% of the population (~23.2 million) is reliant on humanitarian assistance.", 
+"“UNICEF estimates that a child dies every ten minutes in Yemen of preventable diseases, about 50,000 and growing each year”", 
+"More than 80% of the Syrian population live in extreme poverty, living off of $1.90 per day.", 
 "Hair and nails grow faster during pregnancy.", 
+]; 
+
+
+const creditStrings = [
+    "NRC", 
+    "Al-Jazeera News", 
+    "HRW", 
+    "Center for Disaster Philanthropy", 
+    "Center for Disaster Philanthropy", 
+    "World Vision"
+]; 
+
+const creditURLS = [
+    "https://www.nrc.no/news/2018/april/gaza-the-worlds-largest-open-air-prison/", 
+    "https://www.aljazeera.com/news/2021/3/23/children-25-of-civilian-casualties-in-yemen-relief-agency", 
+    "https://www.hrw.org/world-report/2021/country-chapters/yemen", 
+    "https://disasterphilanthropy.org/disaster/yemen-humanitarian-crisis/", 
+    "https://disasterphilanthropy.org/disaster/yemen-humanitarian-crisis/", 
+    "https://www.worldvision.org/refugees-news-stories/syrian-refugee-crisis-facts"
 ]; 
 
 // Initialize and declare count variable to keep track of array contents
