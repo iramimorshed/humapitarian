@@ -24,17 +24,13 @@ This time, I wanted to find a better alternative. I tried everything from image 
 ## How To Use Project
 Navigate to https://iramimorshed.github.io/humapitarian/. The home page features a description and the actual map. When mousing over a red pulsing pin, a tooltip should appear. 
 
-![A screenshot showing what happens when a pin is moused over.](/Users/irammorshed/Desktop/HUMAP/screenshots/screenshot-map.png)
+![A screenshot showing what happens when a pin is moused over.](screenshot-map.png)
 
 Below that is a fact generator. When the button is clicked, a random fact is displayed. 
 *Before Click*
-![A screenshot showing the button before it's clicked.](/Users/irammorshed/Desktop/HUMAP/screenshots/fact-gen-before.png)
+![A screenshot showing the button before it's clicked.](fact-gen-before.png)
 
 *After Click*
-![A screenshot showing the button and the fact after it's clicked.](/Users/irammorshed/Desktop/HUMAP/screenshots/fact-gen-after.png)
+![A screenshot showing the button and the fact after it's clicked.](fact-gen-after.png)
 
 
-
-What your application does,
-Why you used the technologies you used,
-Some of the challenges you faced and features you hope to implement in the future.
