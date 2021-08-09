@@ -1,4 +1,8 @@
 # HUMAPITARIAN 
+## Table of Contents 
+1. [Description] (#description) 
+
+<a name="description"></a>
 ## Description 
 Humapitarian is a play on the word "humanitarian". It is an educational website where users can navigate an interactive map to learn about current humanitarian crises. 
 
@@ -37,7 +41,7 @@ Below that is a fact generator. When the button is clicked, a random fact is dis
 ## Credits
 For the tooltips, I used this tutorial as a guide: https://www.youtube.com/watch?v=e_jEquJo7y8&t=2424s&ab_channel=WEBCIFAR
 
-I did omit some things such as responsiveness and customzing the tooltips to my own style. For the pulsing pins, I drew inspiration from the tutorial above, but primarily followed this website: https://www.florin-pop.com/blog/2019/03/css-pulse-effect/
+I did omit some things such as responsiveness and customizing the tooltips to my own style. For the pulsing pins, I drew inspiration from the tutorial above, but primarily followed this website: https://www.florin-pop.com/blog/2019/03/css-pulse-effect/
 
 I also want to credit my two teammates, Kellie Chan and Samantha Wang, who I worked with to create the first version of Humapitarian in 2018 (*Link given upon request*). 
 
