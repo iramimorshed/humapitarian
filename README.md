@@ -1,8 +1,16 @@
 # HUMAPITARIAN 
-## Table of Contents 
-1. [Description] (#description) 
+## Table of Contents
+- [HUMAPITARIAN](#humapitarian)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Motivation](#motivation)
+  - [Technologies Used](#technologies-used)
+  - [Vision](#vision)
+  - [Challenges](#challenges)
+    - [Map](#map)
+  - [How To Use Project](#how-to-use-project)
+  - [Credits](#credits)
 
-<a name="description"></a>
 ## Description 
 Humapitarian is a play on the word "humanitarian". It is an educational website where users can navigate an interactive map to learn about current humanitarian crises. 
 
