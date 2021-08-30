@@ -39,15 +39,15 @@ This time, I wanted to find a better alternative. I tried everything from image 
 ## How To Use Project
 Navigate to https://iramimorshed.github.io/humapitarian/. The home page features a description and the actual map. When mousing over a red pulsing pin, a tooltip should appear. 
 
-![A screenshot showing what happens when a pin is moused over.](screenshot-map.png)
+![A screenshot showing what happens when a pin is moused over.](screenshots/screenshot-map.png)
 
 Below that is a fact generator. When the button is clicked, a random fact is displayed. 
 
 *Before Click*
-![A screenshot showing the button before it's clicked.](fact-gen-before.png)
+![A screenshot showing the button before it's clicked.](screenshots/fact-gen-before.png)
 
 *After Click*
-![A screenshot showing the button and the fact after it's clicked.](fact-gen-after.png)
+![A screenshot showing the button and the fact after it's clicked.](screenshots/fact-gen-after.png)
 
 ## Credits
 For the tooltips, I used this tutorial as a guide: https://www.youtube.com/watch?v=e_jEquJo7y8&t=2424s&ab_channel=WEBCIFAR
